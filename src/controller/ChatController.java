@@ -15,7 +15,7 @@ public class ChatController
 		{
 			
 		}
-		Talk();
+		
 	}
 	
 	public void Talk()
