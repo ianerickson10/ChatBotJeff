@@ -1,7 +1,9 @@
-package controller;
+package chat.controller;
 
-import model.ChatModel;
 import javax.swing.JOptionPane;
+
+import chat.model.ChatModel;
+
 import java.util.ArrayList;
 
 
@@ -27,6 +29,12 @@ public class ChatController
 		output = simpleBot.processtext(input);
 		return output;
 	}
+	
+	public ChatModel getChatbot()
+	{
+		return simpleBot;
+	}
+	
 }
 
 
