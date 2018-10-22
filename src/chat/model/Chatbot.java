@@ -2,7 +2,7 @@ package chat.model;
 
 import java.util.ArrayList;
 
-public class ChatModel
+public class Chatbot
 {
 	private ArrayList<String> spookyList;
 	private ArrayList<String> responseList;
@@ -12,7 +12,7 @@ public class ChatModel
 	private String currentUser;
 	
 	
-	public ChatModel()
+	public Chatbot()
 	{
 		this.joke = "What's the difference between a dirty bus station and a crab with breast implants?";
 		
@@ -25,18 +25,33 @@ public class ChatModel
 	
 	private void buildLists()
 	{
+		responseList.add("hello");
 		responseList.add("Hi, How can I help you?");
 		responseList.add("You need to make sence");
 		responseList.add("Thank you");
 		responseList.add("You're welcome");
 		responseList.add("goodbye");
 		responseList.add("wut");
+		r
+		r
+		r
+		r
+		r
+		r
+		r
+		r
+		r
 		
+		spookyList.add("Halloween");
 		spookyList.add("SKELETON WAR!!!");
 		spookyList.add("snoteleks");
 		spookyList.add("spoopy");
 		spookyList.add("*doot*");
-		spookyList.add("Rattled!");
+		spookyList.add("It's frickin bats, I love Halloween");
+		spookyList.add("witches");
+		spookyList.add("Pumpkin");
+		spookyList.add("spooky");
+		
 		
 	}
 	
