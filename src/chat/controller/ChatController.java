@@ -24,9 +24,8 @@ public class ChatController
 	
 	public String interactwithChatbot(String text)
 	{
-		String output = "";
 		String input = JOptionPane.showInputDialog(null, "Hi whats up?");
-		output = simpleBot.processtext(input);
+		String output = simpleBot.processText(input);
 		return output;
 	}
 	

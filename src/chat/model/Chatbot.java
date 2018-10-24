@@ -2,6 +2,8 @@ package chat.model;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 public class Chatbot
 {
 	private ArrayList<String> spookyList;
@@ -25,22 +27,22 @@ public class Chatbot
 	
 	private void buildLists()
 	{
-		responseList.add("hello");
+		responseList.add("Hello");
 		responseList.add("Hi, How can I help you?");
 		responseList.add("You need to make sence");
 		responseList.add("Thank you");
 		responseList.add("You're welcome");
 		responseList.add("goodbye");
 		responseList.add("wut");
-		r
-		r
-		r
-		r
-		r
-		r
-		r
-		r
-		r
+		responseList.add("Sounds good!");
+		responseList.add("Umm, ok.");
+		responseList.add(".?");
+		responseList.add("Yeah alright");
+		responseList.add("Woah Sick!");
+		//responseList.add("")
+		//r
+		//r
+		//r
 		
 		spookyList.add("Halloween");
 		spookyList.add("SKELETON WAR!!!");
@@ -58,10 +60,35 @@ public class Chatbot
 	public String processText(String userText)
 	{
 		String answer = "";
-		
-		answer += "You said: " = userText;
-		
+		userText = JOptionPane.showInputDialog("I am going to repeat what you say");
+		answer += "You said: " + userText;
+		JOptionPane.showInputDialog("You said: " + userText);
 		return answer;
 	}
 	
+	public boolean legitimacyChecker(String input)
+	{
+		boolean isValid = true;
+		
+		if(input == null)
+		{
+			isValid = false;
+		}
+		
+		else if (input.length() < 2)
+		{
+			isValid = false;
+		}
+		
+		else if (input.contains("sdf") || input.contains("hkl"))
+		{
+			isValid = false;
+		}
+		
+		return isValid;
+		
+		
+		
+		
+	}
 }
