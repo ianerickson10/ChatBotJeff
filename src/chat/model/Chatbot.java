@@ -39,10 +39,10 @@ public class Chatbot
 		responseList.add(".?");
 		responseList.add("Yeah alright");
 		responseList.add("Woah Sick!");
-		//responseList.add("")
-		//r
-		//r
-		//r
+		responseList.add("ok");
+		responseList.add("No problem");
+		responseList.add("Yo");
+		responseList.add("Hmm");
 		
 		spookyList.add("Halloween");
 		spookyList.add("SKELETON WAR!!!");
@@ -91,4 +91,25 @@ public class Chatbot
 		
 		
 	}
+
+	public ArrayList<String> getResponseList()
+	{
+		return responseList;
+	}
+
+	public ArrayList<String> getSpookyList()
+	{
+		return spookyList;
+	}
+	
+	public ArrayList<String> setResponseList()
+	{
+		this.responseList = responseList;
+	}
+	
+	public ArrayList<String> setSpookyList()
+	{
+		this.spookyList = spookyList;
+	}
+	
 }
