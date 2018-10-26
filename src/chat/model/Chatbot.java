@@ -91,7 +91,20 @@ public class Chatbot
 		
 		
 	}
-
+	public boolean getContent()
+	{
+		
+	}
+	
+	public String getCurrentUser()
+	{
+		String userName = JOptionPane.showInputDialog("What is your name?");
+		return userName;
+	}
+	
+	
+	
+	
 	public ArrayList<String> getResponseList()
 	{
 		return responseList;
@@ -102,14 +115,20 @@ public class Chatbot
 		return spookyList;
 	}
 	
-	public ArrayList<String> setResponseList()
-	{
-		this.responseList = responseList;
-	}
 	
-	public ArrayList<String> setSpookyList()
-	{
-		this.spookyList = spookyList;
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

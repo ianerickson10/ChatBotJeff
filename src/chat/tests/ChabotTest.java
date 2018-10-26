@@ -28,7 +28,7 @@ public class ChabotTest
 	@Test
 	public void testChatbot()
 	{
-		assertNotNull("You need to initialize the content data member", testedBot.getContent() );
+		assertNotNull("You need to initialize the content data member", testedBot.getContent());
 		assertNotNull("ArrayLists need to be initialized too", testedBot.getSpookyList());
 		assertNotNull("ArrayLists need to be initialized too", testedBot.getResponseList());
 		assertNotNull("Current user data member needs to be initialized", testedBot.getCurrentUser());
