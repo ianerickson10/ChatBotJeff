@@ -56,20 +56,7 @@ public class Chatbot
 		
 		
 	}
-	/*
-	public String processText(String userText)
-	{
-		String answer = "";
-		
-		for(int counter = 0; counter < 2; counter +=1)
-		{
-			userText = JOptionPane.showInputDialog("I am going to repeat what you say");
-			answer += "You said: " + userText;
-			JOptionPane.showInputDialog("You said: " + userText);
-		}
-		return answer;
-	}
-	*/
+	
 	
 	//------------------------ Checkers ---------------------------\\
 	
@@ -121,13 +108,20 @@ public class Chatbot
 		return isSpooky;
 	}
 	
-	public boolean processText(String input)
+	public String processText(String input)
 	{
+		input = "";
+		input += "You said: ";
+		input += "Chatbot says: ";		
+		//input = JOptionPane.showInputDialog("I am going to repeat what you say");
+		//JOptionPane.showInputDialog("You said: " + input);
 		
+		
+		return input;
 	}
 	
-	
-	
+		
+		
 	//--------------------------------------------------------------\\
 	
 	public ArrayList<String> getResponseList()
