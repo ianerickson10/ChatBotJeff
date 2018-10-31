@@ -59,11 +59,14 @@ public class Chatbot
 	
 	public String processText(String userText)
 	{
-		String answer = "";
-		userText = JOptionPane.showInputDialog("I am going to repeat what you say");
-		answer += "You said: " + userText;
-		JOptionPane.showInputDialog("You said: " + userText);
-		return answer;
+		for(int counter = 0; counter < 2; counter +=1)
+		{
+			String answer = "";
+			userText = JOptionPane.showInputDialog("I am going to repeat what you say");
+			answer += "You said: " + userText;
+			JOptionPane.showInputDialog("You said: " + userText);
+			return answer;
+		}
 	}
 	
 	public boolean legitimacyChecker(String input)
@@ -86,11 +89,8 @@ public class Chatbot
 		}
 		
 		return isValid;
-		
-		
-		
-		
 	}
+	
 	public boolean getContent()
 	{
 		
@@ -101,6 +101,27 @@ public class Chatbot
 		String userName = JOptionPane.showInputDialog("What is your name?");
 		return userName;
 	}
+	
+	public boolean spookyChecker(String input)
+	{
+		boolean isSpooky = false;
+		
+		for(int spookyLocation = 0; spookyLocation <= spookyList.size(); spookyLocation +=1)
+		{
+			isSpooky = true;
+		}
+		if(input.contains("Haloween"))
+		{
+			isSpooky = true;
+		}
+		else if(input.contains("Easter"))
+		{
+			isSpooky = false;
+		}
+		
+		return isSpooky;
+	}
+	
 	
 	
 	
@@ -114,19 +135,6 @@ public class Chatbot
 	{
 		return spookyList;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
