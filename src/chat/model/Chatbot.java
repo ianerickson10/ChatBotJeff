@@ -17,7 +17,7 @@ public class Chatbot
 	public Chatbot()
 	{
 		this.joke = "What's the difference between a dirty bus station and a crab with breast implants?";
-		
+		this.content = "hi";
 		this.responseList = new ArrayList<String>();
 		this.spookyList = new ArrayList<String>();
 		
@@ -84,7 +84,7 @@ public class Chatbot
 	
 	public String getCurrentUser()
 	{
-		String userName = JOptionPane.showInputDialog("What is your name?");
+		String userName = JOptionPane.showInputDialog(null, "What is your name?");
 		return userName;
 	}
 	
@@ -113,7 +113,7 @@ public class Chatbot
 		input = "";
 		input += "You said: ";
 		input += "Chatbot says: ";		
-		//input = JOptionPane.showInputDialog("I am going to repeat what you say");
+		//input = JOptionPane.showInputDialog(null, "I am going to repeat what you say");
 		//JOptionPane.showInputDialog("You said: " + input);
 		
 		
@@ -123,6 +123,23 @@ public class Chatbot
 	public boolean contentChecker(String content)
 	{
 		boolean truth = true;
+		if(content.equals("text" + getContent() + "text"))
+		{
+			truth = false;
+		}
+		else if(content.equals("text" + getContent()))
+		{
+			truth = false;
+		}
+		else if(content.equals(getContent() + "text"))
+		{
+			truth = false;
+		}
+		else if(content.equals(getContent()))
+		{
+			truth = true;
+			JOptionPane.showMessageDialog(null, "You said the special words");
+		}
 		
 		return truth;
 	}
@@ -144,5 +161,8 @@ public class Chatbot
 		return spookyList;
 	}
 	
-	
+	public Chatbot getChatbot()
+	{
+		return Chatbot;
+	}
 }
