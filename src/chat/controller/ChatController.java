@@ -29,7 +29,7 @@ public class ChatController
 		return output;
 	}
 	
-	public Chatbot getChatbot()
+	public Chatbot getChatbot(String input)
 	{
 		return simpleBot;
 	}

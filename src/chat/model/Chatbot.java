@@ -82,11 +82,11 @@ public class Chatbot
 		return isValid;
 	}
 	
-	//public String getCurrentUser()
-	//{
-	//	String userName = JOptionPane.showInputDialog("What is your name?");
-	//	return userName;
-	//}
+	public String getCurrentUser()
+	{
+		String userName = JOptionPane.showInputDialog("What is your name?");
+		return userName;
+	}
 	
 	public boolean spookyChecker(String input)
 	{
@@ -120,9 +120,19 @@ public class Chatbot
 		return input;
 	}
 	
+	public boolean contentChecker(String content)
+	{
+		boolean truth = true;
 		
+		return truth;
+	}
 		
-	//--------------------------------------------------------------\\
+	//--------------------------- Get ------------------------------\\
+	
+	public String getContent()
+	{
+		return content;
+	}
 	
 	public ArrayList<String> getResponseList()
 	{
@@ -133,4 +143,6 @@ public class Chatbot
 	{
 		return spookyList;
 	}
+	
+	
 }
