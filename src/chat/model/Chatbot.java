@@ -112,7 +112,7 @@ public class Chatbot
 	{
 		input = "";
 		input += "You said: ";
-		input += "Chatbot says: ";		
+		input += "Chatbot says: ";
 		//input = JOptionPane.showInputDialog(null, "I am going to repeat what you say");
 		//JOptionPane.showInputDialog("You said: " + input);
 		

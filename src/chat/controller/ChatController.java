@@ -22,14 +22,14 @@ public class ChatController
 		
 	}
 	
-	public String interactwithChatbot(String text)
+	public String interactWithChatbot(String text)
 	{
 		String input = JOptionPane.showInputDialog(null, "Hi whats up?");
 		String output = simpleBot.processText(input);
 		return output;
 	}
 	
-	public Chatbot getChatbot(String input)
+	public Chatbot getChatbot()
 	{
 		return simpleBot;
 	}
