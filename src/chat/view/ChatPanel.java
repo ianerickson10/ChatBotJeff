@@ -16,5 +16,23 @@ public class ChatPanel extends JPanel
 		super();
 		
 		
+		setupPanel();
+		setupLayout();
+		setupListeners();
+	}
+	
+	private void setupPanel()
+	{
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
 	}
 }

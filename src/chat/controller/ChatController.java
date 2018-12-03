@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class ChatController
 {
 	Chatbot simpleBot  = new Chatbot();
+	private ChatFrame appFrame;
 	
 	public ChatController()
 	{
@@ -23,7 +24,7 @@ public class ChatController
 		String response = JOptionPane.showInputDialog(null, "What would you like to say to me?");
 		while(!response.equalsIgnoreCase("quit"))
 		{
-			response = interactWithChatbot(response);
+			//response = interactWithChatbot(response);
 		}
 		
 	}
