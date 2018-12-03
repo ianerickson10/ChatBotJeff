@@ -38,11 +38,11 @@ public class ControllerTest
 		assertTrue("If null is supplied user should be notified about it", testController.interactWithChatbot(null).toLowerCase().contains("null"));
 	}
 
-	@Test
-	public void testUseChatbotCheckers()
-	{
-		assertTrue("Spooky tester method not implemented", testController.useChatbotCheckers("spooky").contains("Halloween"));
-	}
+	//@Test
+	//public void testUseChatbotCheckers()
+	//{
+	//	assertTrue("Spooky tester method not implemented", testController.useChatbotCheckers("spooky").contains("Halloween"));
+	//}
 
 	@Test
 	public void testGetChatbot()

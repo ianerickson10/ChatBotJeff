@@ -161,8 +161,8 @@ public class Chatbot
 		return spookyList;
 	}
 	
-	public Chatbot getChatbot()
-	{
-		return Chatbot;
-	}
+	//public Chatbot getChatbot()
+	//{
+	//	return Chatbot;
+	//}
 }

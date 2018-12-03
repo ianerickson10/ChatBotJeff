@@ -17,7 +17,7 @@ public class ChatController
 		String response = JOptionPane.showInputDialog(null, "What would you like to say to me?");
 		while(!response.equalsIgnoreCase("quit"))
 		{
-			response = interactwithChatbot(response);
+			response = interactWithChatbot(response);
 		}
 		
 	}

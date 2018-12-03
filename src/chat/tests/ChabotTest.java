@@ -50,12 +50,12 @@ public class ChabotTest
 		assertTrue("The chatbot content should be after your content", response.indexOf("You said:") < response.indexOf("Chatbot says: "));
 	}
 
-	@Test
-	public void testChatbotString()
-	{
-		testedBot = new Chatbot("sample content");
-		assertTrue("String constructor needs to assign to the content variable", testedBot.getContent().equals("sample content"));
-	}
+	//@Test
+	//public void testChatbotString()
+	//{
+	//	testedBot = new Chatbot("sample content");
+	//	assertTrue("String constructor needs to assign to the content variable", testedBot.getContent().equals("sample content"));
+	//}
 
 	@Test
 	public void testSpookyChecker()
