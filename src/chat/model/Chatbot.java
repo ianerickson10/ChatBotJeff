@@ -60,25 +60,14 @@ public class Chatbot
 	
 	//------------------------ Checkers ---------------------------\\
 	
-	public boolean legitimacyChecker(String input)
+	public boolean legitimacyChecker(String text)
 	{
-		boolean isValid = true;
+		boolean isValid = false;
 		
-		if(input == null)
+		if(text!= null && text.length() > 3)
 		{
-			isValid = false;
+			isValid = true;
 		}
-		
-		else if (input.length() < 2)
-		{
-			isValid = false;
-		}
-		
-		else if (input.contains("sdf") || input.contains("hkl"))
-		{
-			isValid = false;
-		}
-		
 		return isValid;
 	}
 	
@@ -108,16 +97,26 @@ public class Chatbot
 		return isSpooky;
 	}
 	
-	public String processText(String input)
+	public String processText(String userText)
 	{
-		input = "";
-		input += "You said: ";
-		input += "Chatbot says: ";
-		//input = JOptionPane.showInputDialog(null, "I am going to repeat what you say");
-		//JOptionPane.showInputDialog("You said: " + input);
+		String answer = "";
 		
-		
-		return input;
+		if(!legitimacyChecker(userText))
+		{
+			answer += "You really sould not send null\n";
+		}
+		else
+		{
+			answer += "You said: " + userText + "\n";
+			
+			if(contentChecker(userText))
+			{
+				answer += "You said the special words.\n";
+			}
+			int randomIndex = (int) (responseList.size() * Math.random());
+			answer += "Chatbot says: " + responseList.get(randomIndex) + "\n";
+		}
+		return answer;
 	}
 	
 	public boolean contentChecker(String content)

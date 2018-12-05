@@ -7,33 +7,45 @@ import chat.view.ChatFrame;
 
 import java.util.ArrayList;
 
-
 public class ChatController
 {
-	Chatbot simpleBot  = new Chatbot();
+	private Chatbot simpleBot;
 	private ChatFrame appFrame;
 	
 	public ChatController()
 	{
+		simpleBot = new Chatbot();
 		appFrame = new ChatFrame(this);
 	}
 	
 	public void start()
 	{
-		JOptionPane.showMessageDialog(null, "Yo, I'm jeff. I'm gonna try to be smart but be prepared for me to fail miserably. If you would like to stop at any time type 'quit''");
-		String response = JOptionPane.showInputDialog(null, "What would you like to say to me?");
-		while(!response.equalsIgnoreCase("quit"))
-		{
-			response = interactWithChatbot(response);
-		}
 		
 	}
 	
 	public String interactWithChatbot(String text)
 	{
-		String input = JOptionPane.showInputDialog(null, "Hi whats up?");
-		String output = simpleBot.processText(input);
+		String output = "";
+		output += simpleBot.processText(text);
 		return output;
+	}
+	
+	public String useChatbotCheckers(String text)
+	{
+		String testedValues = "the following checkers passed:";
+		if(simpleBot.contentChecker(text))
+		{
+			testedValues += "\nContent Checker";
+		}
+		if(simpleBot.spookyChecker(text))
+		{
+			testedValues += "\nSpookyChecker Happy Halloween";
+		}
+		if (simpleBot.legitimacyChecker(text))
+		{
+			testedValues += "\nValidity Checker";
+		}
+		return testedValues;
 	}
 	
 	public Chatbot getChatbot()
