@@ -9,9 +9,16 @@ import java.awt.Font;
 
 public class ChatPanel extends JPanel
 {
-	//initialize parts here Ex: private ChatController appController;
+	private ChatController appController;
+	private JButton chatButton;
+	private JButton checkedButton;
+	private JButton loadButton;
+	private JButton saveButton;
+	private JTextField chatField;
+	private JTextArea chatArea;
+	private JScrollPane chatPane;
 	
-	public ChatPanel()
+	public ChatPanel(ChatController appController)
 	{
 		super();
 		
