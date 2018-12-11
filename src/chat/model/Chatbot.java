@@ -64,7 +64,7 @@ public class Chatbot
 	{
 		boolean isValid = false;
 		
-		if(text!= null && text.length() > 3)
+		if(text!= null && text.length() > 1)
 		{
 			isValid = true;
 		}
@@ -113,8 +113,17 @@ public class Chatbot
 			{
 				answer += "\n";
 			}
-			int randomIndex = (int) (responseList.size() * Math.random());
-			answer += "Chatbot: " + responseList.get(randomIndex) + "\n";
+			else if(userText.equals("spooky"))
+			{
+				int randomSpooky = (int) (spookyList.size() * Math.random());
+				answer += "Chatbot: " + spookyList.get(randomSpooky) + "\n";
+			}
+			else
+			{
+				int randomIndex = (int) (responseList.size() * Math.random());
+				answer += "Chatbot: " + responseList.get(randomIndex) + "\n";
+			}
+			
 		}
 		return answer;
 	}

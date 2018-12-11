@@ -113,9 +113,9 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String chatText = chatArea.getText();
-				String path = "";
+				String path = ".";
 				IOController.savetext(appController, path, chatText);
-				chatArea.setText("ChatSaved!");
+				chatArea.setText("ChatSaved!\n");
 			}
 		});
 		

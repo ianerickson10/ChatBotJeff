@@ -15,7 +15,8 @@ public class IOController
 			String filename = path;
 			Calendar date = Calendar.getInstance();
 			filename += "/" + date.get(Calendar.MONTH) + " " + date.get(Calendar.DAY_OF_MONTH);
-			filename += " chatbot save.txt";
+			filename += date.get(Calendar.HOUR) + "-" + date.get(Calendar.MINUTE);
+			filename += " Chatbot save.txt";
 			
 			File saveFile = new File(filename);
 			Scanner textScanner = new Scanner(textToSave);
