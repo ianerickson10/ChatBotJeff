@@ -19,6 +19,7 @@ public class ChatPanel extends JPanel
 	private JTextField chatField;
 	private JTextArea chatArea;
 	private JScrollPane chatPane;
+	private JButton resetButton;
 	
 	public ChatPanel(ChatController appController)
 	{
@@ -31,6 +32,7 @@ public class ChatPanel extends JPanel
 		loadButton = new JButton("Load");
 		chatButton =  new JButton("Chat");
 		checkerButton = new JButton("Check Text");
+		resetButton = new JButton("Reset");
 		
 		chatField = new JTextField("Talk to the bot here", 50);
 		chatArea = new JTextArea("Chat area", 20, 50);
@@ -66,6 +68,7 @@ public class ChatPanel extends JPanel
 		this.add(loadButton);
 		this.add(checkerButton);
 		this.add(chatField);
+		this.add(resetButton);
 	}
 	
 	private void setupLayout()
@@ -84,6 +87,8 @@ public class ChatPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.NORTH, checkerButton, 0, SpringLayout.NORTH, chatButton);
 		appLayout.putConstraint(SpringLayout.WEST, checkerButton, 19, SpringLayout.EAST, chatButton);
 		appLayout.putConstraint(SpringLayout.NORTH, chatButton, 6, SpringLayout.SOUTH, chatField);
+		appLayout.putConstraint(SpringLayout.NORTH, resetButton, 0, SpringLayout.NORTH, chatButton);
+		appLayout.putConstraint(SpringLayout.WEST, resetButton, 70, SpringLayout.EAST, checkerButton);
 	}
 	
 	private void setupListeners()
@@ -98,6 +103,38 @@ public class ChatPanel extends JPanel
 				chatArea.append(output);
 				chatField.setText("");
 				chatArea.setCaretPosition(chatArea.getDocument().getLength());
+			}
+		});
+		
+		saveButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//code
+			}
+		});
+		
+		loadButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//code
+			}
+		});
+		
+		checkerButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//code
+			}
+		});
+		
+		resetButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				chatField.setText("");
 			}
 		});
 	}

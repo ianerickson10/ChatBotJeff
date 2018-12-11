@@ -43,7 +43,7 @@ public class ChatController
 		}
 		if (simpleBot.legitimacyChecker(text))
 		{
-			testedValues += "\nValidity Checker";
+			testedValues += "\nLegitimacy Checker";
 		}
 		return testedValues;
 	}

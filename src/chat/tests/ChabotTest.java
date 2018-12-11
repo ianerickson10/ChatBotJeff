@@ -33,7 +33,7 @@ public class ChabotTest
 		assertNotNull("ArrayLists need to be initialized too", testedBot.getResponseList());
 		assertNotNull("Current user data member needs to be initialized", testedBot.getCurrentUser());
 	}
-
+	
 	@Test
 	public void testProcessText()
 	{
@@ -49,7 +49,7 @@ public class ChabotTest
 		String response = testedBot.processText(sampleText);
 		assertTrue("The chatbot content should be after your content", response.indexOf("You said:") < response.indexOf("Chatbot says: "));
 	}
-
+	
 	//@Test
 	//public void testChatbotString()
 	//{
@@ -77,7 +77,7 @@ public class ChabotTest
 		assertFalse("Keyboard mash should return false", testedBot.legitimacyChecker("asdfghjkl"));
 		assertTrue("Strings more than 1 letter should return true", testedBot.legitimacyChecker("aa"));
 	}
-
+	
 	@Test
 	public void testContentChecker()
 	{
