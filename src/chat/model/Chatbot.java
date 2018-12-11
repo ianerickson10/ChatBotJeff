@@ -107,14 +107,14 @@ public class Chatbot
 		}
 		else
 		{
-			answer += "You said: " + userText + "\n";
+			answer += "You: " + userText + "\n";
 			
 			if(contentChecker(userText))
 			{
-				answer += "You said the special words.\n";
+				answer += "\n";
 			}
 			int randomIndex = (int) (responseList.size() * Math.random());
-			answer += "Chatbot says: " + responseList.get(randomIndex) + "\n";
+			answer += "Chatbot: " + responseList.get(randomIndex) + "\n";
 		}
 		return answer;
 	}

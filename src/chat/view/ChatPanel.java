@@ -35,7 +35,7 @@ public class ChatPanel extends JPanel
 		resetButton = new JButton("Reset");
 		
 		chatField = new JTextField("Talk to the bot here", 50);
-		chatArea = new JTextArea("Chat area", 20, 50);
+		chatArea = new JTextArea("", 20, 50);
 		chatPane = new JScrollPane();
 				
 		setupScrollPane();
