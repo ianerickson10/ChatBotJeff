@@ -113,16 +113,9 @@ public class Chatbot
 			{
 				answer += "\n";
 			}
-			else if(userText.equals("spooky"))
-			{
-				int randomSpooky = (int) (spookyList.size() * Math.random());
-				answer += "Chatbot: " + spookyList.get(randomSpooky) + "\n";
-			}
-			else
-			{
-				int randomIndex = (int) (responseList.size() * Math.random());
-				answer += "Chatbot: " + responseList.get(randomIndex) + "\n";
-			}
+			int randomIndex = (int) (responseList.size() * Math.random());
+			answer += "Chatbot: " + responseList.get(randomIndex) + "\n";
+			answer += "\n";
 			
 		}
 		return answer;
