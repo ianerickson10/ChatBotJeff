@@ -57,6 +57,7 @@ public class IOController
 				{
 					contents += fileScanner.nextLine() + "\n";
 				}
+				fileScanner.close();
 			}
 		}
 		catch(IOException error)
@@ -68,5 +69,10 @@ public class IOController
 			app.handleErrors(genericError);
 		}
 		return contents;
+	}
+	
+	public static void saveTextWithResources(ChatController app, String path, String textToSave)
+	{
+		
 	}
 }

@@ -113,7 +113,7 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String chatText = chatArea.getText();
-				String path = ".";
+				String path = getPath("Save");
 				IOController.savetext(appController, path, chatText);
 				chatArea.setText("ChatSaved!\n");
 			}
@@ -142,5 +142,30 @@ public class ChatPanel extends JPanel
 				chatField.setText("");
 			}
 		});
+	}
+	
+	private String getPath(String choice)
+	{
+		String path = ".";
+		int result = -99;
+		JFileChooser fileChooser = new JFileChooser();
+		if(choice.equals("save"))
+		{
+			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+			result = fileChooser.showSaveDialog(this);
+			if(result == JFileChooser.APPROVE_OPTION)
+			{
+				path = fileChooser.getCurrentDirectory().getAbsolutePath();
+			}
+		}
+		else
+		{
+			result = fileChooser.showOpenDialog(this);
+			if(result == JFileChooser.APPROVE_OPTION)
+			{
+				path = fileChooser.getSelectedFile().getAbsolutePath();
+			}
+		}
+		return path;
 	}
 }
