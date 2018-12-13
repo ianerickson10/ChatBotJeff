@@ -1,6 +1,0 @@
-You: how about now?
-
-Chatbot: Yeah alright
-You: k cool
-
-Chatbot: You're welcome
