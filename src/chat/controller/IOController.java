@@ -75,4 +75,9 @@ public class IOController
 	{
 		
 	}
+	
+	public static void saveBinary()
+	{
+		
+	}
 }

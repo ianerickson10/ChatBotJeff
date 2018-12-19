@@ -139,7 +139,6 @@ public class Chatbot
 		else if(content.equals(getContent()))
 		{
 			truth = true;
-			JOptionPane.showMessageDialog(null, "You said the special words");
 		}
 		
 		return truth;
