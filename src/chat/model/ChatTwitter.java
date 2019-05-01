@@ -1,6 +1,6 @@
 package chat.model;
 
-import chat.controller.ChatController;
+import chat.controller.*;
 
 import java.util.Scanner;
 import java.util.List;
@@ -126,10 +126,10 @@ public class ChatTwitter
 	private String [] createIgnoredWordArray()
 	{
 		String [] boringWords;
-		String fileText = IOController.loadFromFile(app, "commonWords.txt");
+//		String fileText = IOController.loadFile(app, "commonWords.txt");
 		int wordCount = 0;
 		
-		Scanner wordScanner = new Scanner(fileText);
+		Scanner wordScanner = new Scanner(this.getClass().getResourceAsStream("data/commonwords.txt"));
 		
 		while(wordScanner.hasNextLine())
 		{
