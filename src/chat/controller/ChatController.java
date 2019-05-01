@@ -11,11 +11,13 @@ public class ChatController
 {
 	private Chatbot simpleBot;
 	private ChatFrame appFrame;
+	private Twitter myTwitter;
 	
 	public ChatController()
 	{
 		simpleBot = new Chatbot();
 		appFrame = new ChatFrame(this);
+		myTwitter = new ChatTwitter(this);
 	}
 	
 	public void start()
@@ -56,6 +58,23 @@ public class ChatController
 	public void handleErrors(Exception error)
 	{
 		JOptionPane.showMessageDialog(appFrame, error.getMessage());
+	}
+	
+	public ChatFrame getAppFrame()
+	{
+		
+	}
+
+	
+	public void tweet(String text)
+	{
+		myTwitter.sendTweet(text);
+	}
+	
+	public String findWords(String user)
+	{
+		String results = myTwitter.getMostCommonWord(user);
+		return results;
 	}
 	
 }
